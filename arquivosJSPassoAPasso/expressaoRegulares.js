@@ -3,6 +3,7 @@ const texto = 'São geralmente recuperados a partir de um objeto [FileList](http
 function extraiLinks(texto) {
     //uso de expressões regulares no javascript
     const regex = /\[([^\]]*)\]\(https?:\/\/[^$#\s].[^\s]*\)/gm;
+    //match é usado apenas para strings
     const linksExtraidos = texto.match(regex)
     console.log(linksExtraidos)
 }

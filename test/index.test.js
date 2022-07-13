@@ -1,5 +1,5 @@
-import usarConsole from '../../jest/index'
+import usarConsole from "../jest/index";
 
-test('testar função', () => {
-    expect(typeof usarConsole).toBe('function');
+test("testar função", () => {
+    expect(typeof usarConsole).toBe("function");
 });

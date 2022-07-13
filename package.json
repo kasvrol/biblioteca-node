@@ -13,12 +13,14 @@
 	"type": "module",
 	"license": "ISC",
 	"scripts": {
-		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+        "cli": "node cli.js ./arquivos"
 	},
 	"author": "Ana Karolina dos Santos",
 	"dependencies": {
 		"chalk": "^5.0.1",
-		"nodemon": "^2.0.19"
+		"nodemon": "^2.0.19",
+        "node-fetch": "^3.2.6"
 	},
 	"jest": {
 		"transform": {},

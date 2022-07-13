@@ -1,6 +1,5 @@
-
-import fs from 'fs';
-import chalk from 'chalk';
+import fs from "fs";
+import chalk from "chalk";
 
 function extraiLinks(texto) {
     //uso de expressões regulares no javascript
@@ -11,14 +10,15 @@ function extraiLinks(texto) {
     //expressão regular executada no parâmetro 'texto'
     /*a variável temp deve receber a expressão executada no texto enquanto houver trechos no texto que se enquadre na expressão exigida*/
     while ((temp = regex.exec(texto)) !== null) {
-
         /*deve-se incluir os grupos como objeto onde o primeiro grupo da expressão será a chave e o segundo o valor*/
-        arrayResultados.push({ [temp[1]]: temp[2] })
-
+        arrayResultados.push({ [temp[1]]: temp[2] });
     }
 
-    return arrayResultados;
+    // função que checará se existe algum link requerido ou não
+    const existeLink =
+        arrayResultados.length === 0 ? "não existe link" : arrayResultados;
 
+    return existeLink;
 }
 
 function trataErro(erro) {
@@ -26,13 +26,13 @@ function trataErro(erro) {
 }
 
 async function pegaArquivo(caminhoDoArquivo) {
-    const enconding = 'utf-8';
+    const enconding = "utf-8";
     try {
-        const texto = await fs.promises.readFile(caminhoDoArquivo, enconding)
-        console.log(extraiLinks(texto))
+        const texto = await fs.promises.readFile(caminhoDoArquivo, enconding);
+        return extraiLinks(texto);
     } catch (error) {
-        trataErro(error)
+        trataErro(error);
     }
 }
 
-pegaArquivo('./arquivos/texto1.md')
+export default pegaArquivo;

@@ -1,16 +1,18 @@
 {
-	"name": "bibliotecas-node",
-	"version": "1.0.0",
-	"description": "projeto criado para estudo nas bibliotecas do node",
-	"main": "index.js",
-	"type": "module",
-	"scripts": {
-		"test": "nodemon index.js"
-	},
-	"author": "Ana Karolina dos Santos",
-	"license": "ISC",
-	"dependencies": {
-		"chalk": "^5.0.1",
-		"nodemon": "^2.0.19"
-	}
+    "name": "bibliotecas-node",
+    "version": "1.0.0",
+    "description": "projeto criado para estudo nas bibliotecas do node",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "jest ./test",
+        "cli": "node cli.js ./arquivos"
+    },
+    "author": "Ana Karolina dos Santos",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^5.0.1",
+        "node-fetch": "^3.2.6",
+        "nodemon": "^2.0.19"
+    }
 }

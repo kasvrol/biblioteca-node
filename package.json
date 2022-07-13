@@ -6,17 +6,30 @@
         "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
         "jest": "^28.1.2"
     },
-    "name": "bibliotecas-node",
+    "name": "rastreia-link",
+    "keywords": [
+        "markdown",
+        "URL"
+    ],
+    "bin": {
+        "<rastreia-link>": "./cli.js"
+    },
+    "preferGlobal": true,
     "version": "1.0.0",
     "description": "projeto criado para estudo nas bibliotecas do node",
-    "main": "index.js",
+    "main": "./cli.js",
     "type": "module",
     "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kasvrol/rastreia-link/issues",
+        "email": "santosak1999@gmail.com"
+    },
+    "homepage": "https://github.com/kasvrol/rastreia-link#readme",
     "scripts": {
         "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
         "cli": "node cli.js ./arquivos"
     },
-    "author": "Ana Karolina dos Santos",
+    "author": "Ana Karolina dos Santos (kasvrol)",
     "dependencies": {
         "nodemon": "^2.0.19",
         "node-fetch": "^3.2.6"

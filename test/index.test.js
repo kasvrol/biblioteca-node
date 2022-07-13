@@ -12,13 +12,13 @@ describe("pegaArquivo::", () => {
     });
     it("deve retornar um array de resultados", async () => {
         const theFunction = await pegaArquivo(
-            "../biblioteca-node/test/arquivos/com-link.md"
+            "../rastreia-link/test/arquivos/com-link.md"
         );
         expect(theFunction).toEqual(resultado);
     });
     it("não deve retornar links", async () => {
         const theFunction = await pegaArquivo(
-            "../biblioteca-node/test/arquivos/sem-link.md"
+            "../rastreia-link/test/arquivos/sem-link.md"
         );
         expect(theFunction).toEqual("não existe link");
     });

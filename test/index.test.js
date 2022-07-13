@@ -1,5 +1,5 @@
-import usarConsole from "../jest/index";
+import pegaArquivo from "../index";
 
 test("testar função", () => {
-    expect(typeof usarConsole).toBe("function");
+    expect(typeof pegaArquivo).toBe("function");
 });

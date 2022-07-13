@@ -1,5 +1,4 @@
 import fs from "fs";
-import chalk from "chalk";
 
 function extraiLinks(texto) {
     //uso de expressões regulares no javascript
@@ -22,7 +21,7 @@ function extraiLinks(texto) {
 }
 
 function trataErro(erro) {
-    throw new Error(chalk.red(erro));
+    throw new Error(erro);
 }
 
 async function pegaArquivo(caminhoDoArquivo) {

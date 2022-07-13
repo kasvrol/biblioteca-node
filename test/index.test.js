@@ -16,4 +16,10 @@ describe("pegaArquivo::", () => {
         );
         expect(theFunction).toEqual(resultado);
     });
+    it("não deve retornar links", async () => {
+        const theFunction = await pegaArquivo(
+            "../biblioteca-node/test/arquivos/sem-link.md"
+        );
+        expect(theFunction).toEqual("não existe link");
+    });
 });
